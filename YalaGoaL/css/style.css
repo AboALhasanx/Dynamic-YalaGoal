@@ -1,0 +1,351 @@
+:root {
+  --primary-color: #8d4d84;
+  --secondary-color: #333;
+  --highlight-color: #FFA7F4;
+  --background-color: rgb(32, 32, 32);
+  --text-color: white;
+  --font : Calibri;
+}
+
+*::selection{
+  background-color: var(--primary-color);
+}
+
+html {
+scroll-behavior: smooth;
+background-color: var(--background-color);
+}
+
+
+* {
+  color: var(--text-color);
+  font-family: var(--font);
+  text-transform: capitalize;
+}
+
+/*ضبط الروابط لكل الصفحة*/
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*ضبط القوائم لكل الصفحة*/
+ul {
+  list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+/*ضبط شكل شريط القوائم للصفحة*/
+
+footer{
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+
+footer  .links{
+  background-color: var(--secondary-color);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav {
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 20px;
+  font-size: 20px;
+  margin: -10px -8px -8px;
+}
+
+
+nav ul li a.active {
+  color: #FFA7F4; 
+  padding: 5px 0;
+  border-bottom: 3px solid #FFA7F4;
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav li,
+footer div p,
+footer div a,
+footer div a i{
+  padding: 0 20px;
+}
+
+a:hover, .title h1:hover, .title p:last-child:hover, span:hover {
+  color: var(--highlight-color);
+}
+
+
+.main {
+  width: 95%;
+  margin: 20px auto;
+  background-color: #333;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+.main p {
+  padding: 0 5px;
+font-weight: bold;
+}
+
+.league {
+margin: 20px 0;
+}
+
+.matchesAndTable {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leagueHeader {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  background-color: #444;
+border-radius: 20px 20px 0 0;
+}
+.leagueIcon,
+.league .matchesAndTable .matchDay .matchesTable img,
+.leagueTable img {
+  width: 25px;
+padding-right: 5px;
+}
+
+.league .matchesAndTable .matchDay .matchesTable {
+  margin: 10px 0 0 40px;
+}
+.league .matchesAndTable .matchDay .matchesTable td {
+  padding: 20px 5px;
+}
+.league .matchesAndTable .matchDay .matchesTable td:first-child {
+  text-align: right;
+}
+
+.league .matchDay .live {
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+
+
+.league .matchDay .live .Result {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 10px;
+}
+
+.league .matchDay .live .time {
+font-size: 10px;
+}
+.clubName {
+  width: 150px;
+}
+
+.leagueTable {
+  margin: 10px 50px 10px 10px;
+  font-weight: bold;
+}
+
+.leagueTable tr td{
+padding: 10px 15px;
+
+}
+
+
+/*///////////*/
+.newsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto 40px auto;
+  padding-bottom: 20px;
+}
+
+.newsCard {
+  width: calc(94% / 3);
+  min-height: 400px;
+  padding: 10px 10px;
+  position: relative;
+  font-weight: 300;
+}
+
+.newsCard img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+ }
+
+.newsCard h1 {
+  font-size: 25px;
+}
+
+.newsCard h1:hover {
+  text-decoration: underline;
+}
+
+.newsCard p {
+  position: absolute;
+  bottom: 0;
+  font-style: italic;
+  font-size: small;
+  color: #999;
+}
+
+.title{
+  width:70%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  background-color: #333;
+  border-radius: 30px;
+  text-align: justify;
+}
+h1 {
+  font: 800;
+}
+
+.title p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.title p:last-child{
+  font-style: italic;
+  font-size: medium;
+  font-family: monospace;
+}
+
+.newsCardBtn{
+  position: relative;
+  right: -10px;
+  top: -230px;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  background-color: #bbb;
+  border-radius:  10px  ;
+  padding: 5px;
+}
+
+.delete-btn, .edit-btn {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  color: #333;
+  width: max-content;
+  height: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  transition: 0.3s ease;
+  font-weight: 800;
+  margin: 5px 0 0 0;
+  opacity: 70%;
+
+}
+
+.edit-btn:hover {
+  opacity: 100%;
+}
+
+.delete-btn:hover {
+  opacity: 100%;
+}
+
+
+.containerLogin {
+  width: 450px;
+  height: fit-content;
+  margin: 40px auto;
+  background-color: #333;
+  border-radius: 30px;
+      padding: 20px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section h1 {
+  margin: 10px;
+  text-align: center;
+}
+
+section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 0;
+}
+
+section form .inputbox {
+  padding: 15px;
+  margin: 10px auto;
+  border-radius: 10px;
+  border: none;
+  background-color: #222;
+  color: white;
+  width: 350px;
+  text-transform: none !important;
+}
+
+section form .inputbox:focus{
+  outline: #8d4d84 solid 2px;
+}
+
+section form .buttons{
+  display: flex;
+  flex-direction: column;
+}
+
+section form .buttons input{
+  padding: 10px 20px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 10px;
+  background-color: #8d4d84;
+  color: white;
+  font-size: 30px;
+  font-weight: 800;
+  width: 350px;
+}
+
+section form .buttons div{
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  color: white;
+  font-size: 20px;
+}
+
+section form .buttons div a{
+padding: 0 5px;
+text-decoration: underline;
+}
+
+section .error{
+  background-color: red;
+  padding: 3px;
+  border-radius: 5px;
+  text-decoration: underline;
+  margin: 0px;
+}
+
+.check{
+  margin: 20px 0 10px;
+}
+
+
+
